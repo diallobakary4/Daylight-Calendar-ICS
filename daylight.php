@@ -145,7 +145,7 @@ while (strtotime($date) <= strtotime($year-1 . '-12-31') ) :
 ?>
 BEGIN:VEVENT<?php echo "\r\n"; ?>
 CREATED:<?php echo dateToCal(strtotime($date)) . "\r\n"; ?>
-DTSTART:<?php echo dateToCal($sunrise+$gmt_math) . "\r\n"; ?>
+DTSTART:<?php echo dateToCal($sunrise+$gmt_math+3600) . "\r\n"; ?>
 DTEND:<?php echo dateToCal($sunset+$gmt_math) . "\r\n"; ?>
 DTSTAMP:<?php echo dateToCal(time()) . "\r\n"; ?>
 LAST-MODIFIED:<?php echo dateToCal(filemtime(__FILE__)) . "\r\n"; ?>
